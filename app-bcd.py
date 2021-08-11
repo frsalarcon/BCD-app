@@ -3,9 +3,9 @@ import streamlit as st
 from skimage.transform import resize
 import tensorflow as tf
 from tensorflow import keras
-from IPython.display import Image, display
-import matplotlib.pyplot as plt
-import matplotlib.cm as cm
+#from IPython.display import Image, display
+#import matplotlib.pyplot as plt
+#import matplotlib.cm as cm
 import os
 from keras.preprocessing import image
 import pandas as pd
