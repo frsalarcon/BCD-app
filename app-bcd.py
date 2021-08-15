@@ -22,6 +22,7 @@ from skimage import io
 import matplotlib.image as mpimg
 from PIL import Image
 from io import BytesIO
+import time
 # ---------------------------------- modelo ---------------------------------- #
 
 modelo='model.h5'
@@ -41,7 +42,7 @@ import datetime
 
 def main():
 
-    bcd = Image.open('BCD.png')
+    st.title('Breast Cancer Detection.')
     st.image(bcd)
 
 
@@ -52,6 +53,19 @@ def main():
 
 
     if st.button("Ejecutar predicción."):
+        'Starting a long computation...'
+
+        # Add a placeholder
+        latest_iteration = st.empty()
+        bar = st.progress(0)
+
+        for i in range(100):
+          # Update the progress bar with each iteration.
+          latest_iteration.text(f'Iteration {i+1}')
+          bar.progress(i + 1)
+          time.sleep(0.1)
+
+        '...and now we\'re done!'
         im2arr = np.array(image)
         im2arr.resize((100,100,3), refcheck=True)
         x = np.expand_dims(im2arr, axis=0)
