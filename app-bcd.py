@@ -43,7 +43,6 @@ import datetime
 def main():
 
     st.title('Breast Cancer Detection.')
-    st.image(bcd)
 
 
     img_file_buffer = st.file_uploader("Carga una imagen de muestra histologica.", type=["png", "jpg", "jpeg"])
