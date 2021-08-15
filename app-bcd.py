@@ -43,27 +43,7 @@ def main():
 
     bcd = Image.open('BCD.png')
     st.image(bcd)
-    st.text('Ingresar datos del usuario:')
-    @st.cache(allow_output_mutation=True)
-    def get_data():
-        return []
 
-    @st.cache(allow_output_mutation=True)
-    def get_data():
-        return []
-
-    name = st.text_input("Nombre del usuario")
-    appe = st.text_input("Apellido del usuario")
-    # st.title("BCD - Breast Cancer Detection.")
-    # nombre= st.text_input("Nombres del paciente:")
-    # apellido=st.text_input("Apellidos del paciente:")
-    # contacto=st.text_input("Contacto:")
-    # comentario=st.text_input("Comentario:")
-    # date = st.date_input("Ingresar fecha de análisis.")
-    # frame=(nombre,apellido,contacto,comentario,date)
-    # if st.button("Generar datos:"):
-    #     frame.append({"Nombres": nombre, "Apellidos": apellido, "Fecha de análisis":date ,"Contacto":contacto , "Comentario":comentario})
-    #     st.write(pd.DataFrame(frame()))
 
     img_file_buffer = st.file_uploader("Carga una imagen de muestra histologica.", type=["png", "jpg", "jpeg"])
     if img_file_buffer is not None:
